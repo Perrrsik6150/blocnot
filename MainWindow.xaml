@@ -1,0 +1,90 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Блокнот" Height="450" Width="800" FontSize="14" SizeToContent="Manual" Background="#FFF6F6F6" Foreground="White" BorderBrush="#FFC83434" Visibility="Visible" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen"
+        Loaded="Window_Loaded">
+
+    <Grid Margin="0,0,0,3">
+        <DockPanel Margin="0,0,0,399">
+            <Menu DockPanel.Dock ="Top" Height="52">
+                <MenuItem Header="Файл" Width="52" Height="26" FontFamily="Arial" FontSize="16">
+                    <MenuItem Header="Новый файл" FontFamily="Arial" FontSize="14" Click="tabControl1_Open"/>
+                    <MenuItem Header="Открыть" FontFamily="Arial" FontSize="14" Click="tabControl"/>
+                    <MenuItem Header="Сохранить" FontFamily="Arial" FontSize="14"/>
+                    <MenuItem Header="Скохранить как..." FontFamily="Arial" FontSize="14" Click="Save_Click"/>
+                    <MenuItem Header="Закрыть" FontFamily="Arial" FontSize="14" Click="Clouse_Click"/>
+                </MenuItem>
+                <MenuItem Header="Правка" FontFamily="Arial" FontSize="16">
+                    <MenuItem Header="Копировать" FontFamily="Arial" FontSize="14"/>
+                    <MenuItem Header="Вырезать" FontFamily="Arial" FontSize="14"/>
+                    <MenuItem Header="Вставить" FontFamily="Arial" FontSize="14"/>
+                </MenuItem>
+
+                <MenuItem Header="Вид" FontFamily="Arial" FontSize="16">
+                    <MenuItem Header="Строка состояния" FontFamily="Arial" FontSize="14" />
+                    <MenuItem Header="Переводчик" FontFamily="Arial" FontSize="14" Click="btn_Click"/>
+                    <MenuItem Header="Диспетчер приложения" FontFamily="Arial" FontSize="14" Click="btn2_Click"/>
+                    <MenuItem Header="Стиль" FontFamily="Arial" FontSize="14" Click="MenuItem2_Clic"/>
+                </MenuItem>
+
+                <MenuItem Header="Спавка" FontFamily="Arial" FontSize="16">
+                    <MenuItem Header="Помощь" FontFamily="Arial" FontSize="14" Click="MenuItem3_Clic"/>
+                    <MenuItem Header="О программе" FontFamily="Arial" FontSize="14" Click="MenuItem_Clic"/>
+                </MenuItem>
+            </Menu>
+        </DockPanel>
+        <DockPanel Margin="20,65,20,48">
+            <TabControl Name ="tabControl1" DockPanel.Dock ="Top" Width="756" Height="316" >
+                <TabItem Name ="tab" Header ="New">
+                    <TextBox Name="txt" Margin="15,0,12,0"  TextWrapping="Wrap" Height="254" SelectionChanged="txtEditor_SelectionChanged"/>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+        <DockPanel Margin="0,404,0,0">
+            <StatusBar DockPanel.Dock="Bottom" Width="796" Name="bar">
+                <StatusBarItem Width="790">
+                    <TextBlock Name="lblCursorPosition" RenderTransformOrigin="0.5,0.5" Width="780" Height="15" >
+                        <TextBlock.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform ScaleX="1"/>
+                                <SkewTransform/>
+                                <RotateTransform/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </TextBlock.RenderTransform>
+                    </TextBlock>
+                </StatusBarItem>
+            </StatusBar>
+
+        </DockPanel>
+        <Border BorderBrush="Black"  BorderThickness="2" Name="brd" Margin="631,92,0,32">
+            <Grid Background="#FFE7E3E3" Margin="0,0,0,8">
+                <TextBox Margin="40,5,41,272" Text ="Переводчик" FontFamily="Arial" FontSize="14" Visibility="Visible" BorderBrush="#FFE8E3E3" Background="#FFEDE3E3"/>
+                <ComboBox Margin="10,28,10,250" BorderBrush="#FF0B0707" >
+                    <ComboBox.Background>
+                        <LinearGradientBrush EndPoint="0,1">
+                            <GradientStop Color="#FFF0F0F0"/>
+                            <GradientStop Color="White" Offset="1"/>
+                        </LinearGradientBrush>
+                    </ComboBox.Background>
+                    <TextBlock Text="Русский"/>
+                    <TextBlock Text="Английский"/>
+                    <TextBlock Text="Немецкий"/>
+                    <TextBlock Text="Итальянский"/>
+                    <TextBlock Text="Грузниский"/>
+                </ComboBox>
+                    <Button Margin="10,266,21,10" Content="Перевести текст" FontFamily="Arial" FontSize="14" Background="#FFFFFDFD" BorderBrush="#FF221F1F"/>
+                <TextBox Margin="10,70,21,48" />
+            </Grid>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="0,316,0,0" Name="br" RenderTransformOrigin="0.5,0.5">
+            <Grid Background="White" Margin="4,4,-1,4" >
+                <TextBox Text="Диспетчер приложения" Margin="0,0,135,85" FontFamily="Arial" FontSize="14" BorderBrush="#FFF6F6F6"/>
+            </Grid>
+        </Border>
+    </Grid>
+</Window>

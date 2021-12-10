@@ -1,0 +1,13 @@
+﻿<Window x:Class="WpfApp1.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="О программе" Height="250" Width="200" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TextBox Margin="10,10,10,17" Text="               О программе&#xA; &#xA;Разработчик: Малышева А. Д.&#xA;Программа: Блокнот" BorderBrush="#FFF2F4F9" />
+        <Image Margin="64,72,64,33" Source="C:\Users\258\Pictures\Настя\вера\WpfApp1\rr.jpg"/>
+    </Grid>
+</Window>

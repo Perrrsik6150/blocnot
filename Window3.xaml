@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.Window3"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Помощь" Height="450" Width="800">
+    <Grid>
+        <TextBlock ><Run Text="Меню &quot;Файл&quot;" FontWeight="Black"/><Run Language="ru-ru" Text=":"/><LineBreak/>
+            <LineBreak/><Run Text="&quot;Новый файл&quot; - создание нового рабочего файла;"/>
+            <LineBreak/><Run Text="&quot;Открыть&quot; - открытие существующего файла;"/>
+            <LineBreak/><Run Text="&quot;Сохранить&quot; - сохранение изменений в файле;"/>
+            <LineBreak/><Run Text="&quot;Сохранить как&quot; - сохранение нового файла;"/>
+            <LineBreak/><Run Text="&quot;Закрыть&quot; - закрытие открытого файла(вкладки);"/>
+            <LineBreak/><Run/><LineBreak/><Run Text="Меню" FontWeight="Black"/><Run Text=" &quot;Правка&quot;:" FontWeight="Black"/>
+            <LineBreak/><Run/><LineBreak/><Run Text="&quot;Копировать&quot; - копирование текста;"/>
+            <LineBreak/><Run Text="&quot;Вставить&quot; - вставка скопированного текста;"/>
+            <LineBreak/><Run Text="&quot;Вырезать&quot; - удаление выделенного курсором текста;"/>
+            <LineBreak/><Run/><LineBreak/><Run Text="Меню " FontWeight="Black"/><Run Text="&quot;Вид&quot;:" FontWeight="Black"/>
+            <LineBreak/><Run/><LineBreak/><Run Text="&quot;Строка состояния&quot;"/><Run Language="ru-ru" Text=" - показывает строку и символ, на котором остановлен курсор;"/>
+            <LineBreak/><Run Text="&quot;Переводчик&quot;"/><Run Language="ru-ru" Text=" - открытие панели, с помощью которой можно совершить перевод текста на другой язык;"/>
+            <LineBreak/><Run Text="&quot;Диспетчер приложения&quot;"/><Run Language="ru-ru" Text=" - открытие панели, показывающей загрузку процессора, размер оперативной памяти и сетевой трафик;"/>
+            <LineBreak/><Run Text="&quot;Стиль&quot;"/><Run Language="ru-ru" Text=" - открытие окна в котором можно редактировать внешний вид приложения;"/>
+            <LineBreak/><Run/>
+            <LineBreak/><Run Text="Меню &quot;Справка&quot;:" FontWeight="Black"/>
+            <LineBreak/><Run/>
+            <LineBreak/><Run Language="ru-ru" Text="&quot;Помощь&quot; - открытие окна с краткой инструкцией использования приложения;"/>
+            <LineBreak/><Run Language="ru-ru" Text="&quot;О программе&quot; - информация об разработчиках программы."/>
+            <LineBreak/><Run/><LineBreak/><Run/></TextBlock>
+    </Grid>
+</Window>
